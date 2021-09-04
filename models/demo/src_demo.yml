@@ -1,0 +1,35 @@
+version: 2
+
+sources:
+    - name: tpch_sf001
+      database: snowflake_sample_data
+      tables:
+
+        - name: customer
+          description: Raw customers' data
+          columns:
+            - name: c_custkey
+              description: Primary key for customers
+            - name: c_name
+              description: Name of customer
+            - name: c_phone
+              description: Phone number of customer, with country code and area code
+            - name: c_mktsegment
+              description: Marketing segment of customer
+            
+        - name: nation
+          description: Raw nations' data
+          columns:
+            - name: n_nationkey
+              description: Primary key for nations
+            - name: n_name
+              decription: Name of nation
+            
+        - name: region
+          description: Raw regions' data
+          columns: 
+            - name: r_regionkey
+              description: Primary key for regions
+            - name: r_name
+              description: Name of region
+          
